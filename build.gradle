@@ -16,6 +16,11 @@ repositories {
 		url 'https://oss.sonatype.org/content/repositories/snapshots'
 	}
 
+	maven {
+		url "https://maven.nucleoid.xyz/"
+		name "Nucleoid"
+	}
+
 	mavenCentral()
 }
 
@@ -41,8 +46,8 @@ dependencies {
 
 	include(modImplementation('me.lucko:fabric-permissions-api:0.2-SNAPSHOT'))
 
-	modImplementation include("net.kyori:adventure-platform-fabric:5.9.0")
-	modImplementation "net.kyori:adventure-text-minimessage:4.14.0"
+	modImplementation include("eu.pb4:placeholder-api:${project.placeholder_api_version}")
+
 }
 
 processResources {
